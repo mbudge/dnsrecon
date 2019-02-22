@@ -14,14 +14,14 @@ go get github.com/mbudge/dnsrecon
 
 ## Prerequisites
 
-DNSRECON required the following dependencies:
+DNSRECON requires the following dependencies:
 
 ```
 go get github.com/miekg/dns
 go get github.com/gorilla/mux
 go get golang.org/x/time/rate
 go get github.com/golang/groupcache/lru
-```
+``` 
 
 ## Usage
 

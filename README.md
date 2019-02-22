@@ -6,16 +6,20 @@ DNSRECON is a prototype REST API to do dns reconnaissance and collect the comple
 
 DNSRECON can be installed by running:
 
-   go get github.com/mbudge/dnsrecon 
+```
+go get github.com/mbudge/dnsrecon 
+```
 
 ## Prerequisites
 
 DNSRECON required the following dependencies:
 
-   go get github.com/miekg/dns
-   go get github.com/gorilla/mux
-   go get golang.org/x/time/rate
-   go get github.com/golang/groupcache/lru
+```
+go get github.com/miekg/dns
+go get github.com/gorilla/mux
+go get golang.org/x/time/rate
+go get github.com/golang/groupcache/lru
+```
 
 ## Usage
 
@@ -23,27 +27,36 @@ Add more public dns servers to resolvers.yaml before increasing the number of co
 
 ### Run locally
 
-   cd dnsrecon
-   go run *.go
+```
+cd dnsrecon
+go run *.go
+```
 
 ### Build and install
 
-   go install dnsrecon
-   curl http://127.0.0.1:8080/domain/google.com
+```
+go install dnsrecon
+curl http://127.0.0.1:8080/domain/google.com
+```
 
 ### Docker 
 
 #### Build 
-   
-   cd dnsrecon
-   docker build --rm -t "dnsrecon" .
+
+```
+cd dnsrecon
+docker build --rm -t "dnsrecon" .
+```
 
 #### Run 
 
-   docker run -d -p 8080:8080 --restart=unless-stopped --log-driver json-file --log-opt max-size=10m --log-opt max-file=3 --name dnsrecon dnsrecon
+```
+docker run -d -p 8080:8080 --restart=unless-stopped --log-driver json-file --log-opt max-size=10m --log-opt max-file=3 --name dnsrecon dnsrecon
+```
 
 ## Example
 
+```
 curl http://127.0.0.1:8080/domain/google.com | json_pp
 {
    "timestamp" : "2019-02-22T11:10:16.83421805Z",
@@ -167,6 +180,7 @@ curl http://127.0.0.1:8080/domain/google.com | json_pp
       "cname_paths" : {}
    }
 }
+```
 
 ## TODO
 

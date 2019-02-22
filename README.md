@@ -2,6 +2,8 @@
 
 DNSRECON is a prototype REST API to do dns reconnaissance and collect the complete set of SOA, NS, MX, A, AAAA, TXT and CNAME reconds. More dns records and features will be added after the tool is productionised later this year.
 
+Warning: not for production use
+
 ## Install
 
 DNSRECON can be installed by running:
